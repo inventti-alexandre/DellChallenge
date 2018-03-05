@@ -1,0 +1,16 @@
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Web2\bin\Debug\netcoreapp2.0\DellChallenge.Web2.deps.json
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Web2\bin\Debug\netcoreapp2.0\DellChallenge.Web2.runtimeconfig.json
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Web2\bin\Debug\netcoreapp2.0\DellChallenge.Web2.runtimeconfig.dev.json
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Web2\bin\Debug\netcoreapp2.0\DellChallenge.Web2.dll
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Web2\bin\Debug\netcoreapp2.0\DellChallenge.Web2.pdb
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Web2\bin\Debug\netcoreapp2.0\DellChallenge.Repository.dll
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Web2\bin\Debug\netcoreapp2.0\DellChallenge.Repository.pdb
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Web2\obj\Debug\netcoreapp2.0\DellChallenge.Web2.csprojResolveAssemblyReference.cache
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Web2\obj\Debug\netcoreapp2.0\DellChallenge.Web2.csproj.CoreCompileInputs.cache
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Web2\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Web2\obj\Debug\netcoreapp2.0\DellChallenge.Web2.AssemblyInfoInputs.cache
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Web2\obj\Debug\netcoreapp2.0\DellChallenge.Web2.AssemblyInfo.cs
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Web2\obj\Debug\netcoreapp2.0\DellChallenge.Web2.dll
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Web2\obj\Debug\netcoreapp2.0\DellChallenge.Web2.pdb
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Web2\bin\Debug\netcoreapp2.0\DellChallenge.Domain2.dll
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Web2\bin\Debug\netcoreapp2.0\DellChallenge.Domain2.pdb

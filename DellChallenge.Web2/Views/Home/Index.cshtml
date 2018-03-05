@@ -1,0 +1,66 @@
+﻿@model DellChallenge.Domain.Enitities.User
+@{
+    ViewData["Title"] = "Home Page";
+}
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        
+        $("#btnLogin").on('click', function (e) {
+
+            e.preventDefault();
+           
+            var Email = $('#Email').val();
+            var Password = $('#Password').val();
+
+            var usuario  = {
+                Email : Email,
+                Password : Password
+
+            };
+
+            JSON.stringify(usuario)
+            debugger;
+            $.ajax({
+                url: "/Home/DoLogin",
+                type: "POST",
+                data: usuario,
+                success: function (response) {
+                    if (response.success) {
+                        
+                    }
+                },
+                error: function (error) {
+                  
+                }
+            })
+
+        });
+
+    });
+</script>
+
+<div class="row">
+    <div class="row margin">
+        <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", maxlength = 11 })
+            @Html.LabelFor(model => model.Email)
+        </div>
+    </div>
+
+    <div class="row margin">
+        <div class="input-field col s12">
+            <i class="mdi-action-lock-outline prefix"></i>
+            @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+            @Html.LabelFor(model => model.Password)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="input-field col s12">
+            <button id="btnLogin" class="btn waves-effect waves-light col s12" type="submit">Entrar</button>
+        </div>
+    </div>
+</div>

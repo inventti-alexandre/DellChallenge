@@ -1,0 +1,9 @@
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Repository\bin\Debug\netcoreapp2.0\DellChallenge.Repository.deps.json
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Repository\bin\Debug\netcoreapp2.0\DellChallenge.Repository.dll
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Repository\bin\Debug\netcoreapp2.0\DellChallenge.Repository.pdb
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.csprojResolveAssemblyReference.cache
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.csproj.CoreCompileInputs.cache
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.AssemblyInfoInputs.cache
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.AssemblyInfo.cs
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.dll
+c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.pdb
