@@ -4065,6 +4065,15 @@
         }
       },
       "DellChallenge.Repository/1.0.0": {
+        "dependencies": {
+          "DellChallenge.Domain2": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1",
+          "Microsoft.EntityFrameworkCore.Tools": "2.0.1",
+          "Microsoft.Extensions.Configuration": "2.0.0",
+          "Microsoft.Extensions.Configuration.FileExtensions": "2.0.0",
+          "Microsoft.Extensions.Configuration.Json": "2.0.0"
+        },
         "runtime": {
           "DellChallenge.Repository.dll": {}
         },

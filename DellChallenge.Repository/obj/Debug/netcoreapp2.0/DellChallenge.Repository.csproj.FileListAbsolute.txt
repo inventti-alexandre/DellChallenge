@@ -18,3 +18,14 @@ C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\o
 C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.pdb
 C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\bin\Debug\netcoreapp2.0\DellChallenge.Domain2.dll
 C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\bin\Debug\netcoreapp2.0\DellChallenge.Domain2.pdb
+C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Repository\bin\Debug\netcoreapp2.0\DellChallenge.Repository.deps.json
+C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Repository\bin\Debug\netcoreapp2.0\DellChallenge.Repository.dll
+C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Repository\bin\Debug\netcoreapp2.0\DellChallenge.Repository.pdb
+C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Repository\bin\Debug\netcoreapp2.0\DellChallenge.Domain2.dll
+C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Repository\bin\Debug\netcoreapp2.0\DellChallenge.Domain2.pdb
+C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.csprojResolveAssemblyReference.cache
+C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.csproj.CoreCompileInputs.cache
+C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.AssemblyInfoInputs.cache
+C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.AssemblyInfo.cs
+C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.dll
+C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.pdb

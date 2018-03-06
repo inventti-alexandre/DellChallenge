@@ -18,7 +18,8 @@ namespace DellChallenge.Domain.Enitities
         public User(string email, string password)
         {
             Email = email;
-            Password = EncryptPassword(password);
+            //Password = EncryptPassword(password);
+            Password = password;
         }
 
         private string EncryptPassword(string pass)

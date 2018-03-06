@@ -1,39 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 using DellChallenge.Domain.Enitities;
+using DellChallenge.Domain.EnititiesViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
 namespace DellChallenge.Web2.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult About()
+  
+        public async Task<IActionResult> SignOut()
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
+            await RemoveUser();
+            return Redirect("Index");
         }
 
-        public IActionResult Contact()
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult AccessDenied(string returnUrl = null)
         {
-            ViewData["Message"] = "Your contact page.";
 
-            return View();
-        }
-
-        public IActionResult Error()
-        {
-            return View();
+            return View("AccessDenied");
         }
 
         [HttpGet]
@@ -46,25 +39,28 @@ namespace DellChallenge.Web2.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public JsonResult Login([FromBody]User model)
+        public async Task<IActionResult> Login(string email, string password)
         {
-            if (ModelState.IsValid)
+            try
             {
-                // This doesn't count login failures towards account lockout
-                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                //var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
-                //if (result.Succeeded)
-                //{
-                //    _logger.LogInformation("User logged in.");
-                //    return RedirectToLocal(returnUrl);
-                //}
+                if (ModelState.IsValid)
+                {
+                    var user = new UserLoginViewModel() { Email = email, Password = password };
 
-                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    var userAuthenticated = new User(email, password);
 
+                    await RegisterUser(userAuthenticated);
+
+                }
+
+                return Json(new { success = true, html = View("Home") });
+            }
+            catch(Exception ex)
+            {
 
             }
-
-            return null;
+            return Json(new { success = true, html = View("Home")});
+            
         }
     }
 }
