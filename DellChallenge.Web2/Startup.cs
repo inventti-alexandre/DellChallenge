@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -21,7 +23,7 @@ namespace DellChallenge.Web2
             .AddCookie("Cookies", options =>
             {
                 options.AccessDeniedPath = "/Home/AccessDenied";
-                options.LoginPath = "/Home/Login";
+                options.LoginPath = "/Home/AccessDenied";
             });
 
             services.AddSession();
@@ -47,6 +49,7 @@ namespace DellChallenge.Web2
             app.UseAuthentication();
 
             app.UseSession();
+            
 
             app.UseMvc(routes =>
             {

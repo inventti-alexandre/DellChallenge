@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DellChallenge.Web2.Controllers
 {
-    
+    [Authorize]
     public class ClientController : BaseController
     {
       
