@@ -16,7 +16,7 @@ namespace DellChallange.Repository.Mappings
                 .IsRequired();
 
             builder.Property(c => c.Password)
-            .HasColumnType("varchar(50)")
+            .HasColumnType("varchar(32)")
                .IsRequired();
 
             builder.HasOne(c => c.Role);

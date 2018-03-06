@@ -23,17 +23,17 @@ namespace DellChallange.Repository.Mappings
 
             builder.Property(c => c.Phone)
             .HasColumnType("varchar(10)")
-                .HasMaxLength(100)
+                .HasMaxLength(10)
                 .IsRequired();
 
             builder.Property(c => c.City)
             .HasColumnType("varchar(10)")
-                .HasMaxLength(100)
+                .HasMaxLength(10)
                 .IsRequired();
 
             builder.Property(c => c.Region)
             .HasColumnType("varchar(10)")
-                .HasMaxLength(100)
+                .HasMaxLength(10)
                 .IsRequired();
 
 
