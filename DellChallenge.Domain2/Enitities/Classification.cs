@@ -6,10 +6,14 @@ using System.Text;
 
 namespace DellChallenge.Domain.Enitities
 {
-    [Table("Classification")]
     public class Classification
     {
-        [Key]
+
+        public Classification(int id)
+        {
+            Id = id;
+        }
+
         public int Id { get; set; }
         public string Description { get; set; }
     }

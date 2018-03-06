@@ -7,3 +7,9 @@ c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.
 c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Domain2\obj\Debug\netcoreapp2.0\DellChallenge.Domain2.dll
 c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Domain2\obj\Debug\netcoreapp2.0\DellChallenge.Domain2.pdb
 C:\Users\07396942438\Documents\Visual Studio 2017\Projects\Domain\DellChallenge.Domain2\obj\Debug\netcoreapp2.0\DellChallenge.Domain2.csprojResolveAssemblyReference.cache
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Domain2\obj\Debug\netcoreapp2.0\DellChallenge.Domain2.csprojResolveAssemblyReference.cache
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Domain2\obj\Debug\netcoreapp2.0\DellChallenge.Domain2.csproj.CoreCompileInputs.cache
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Domain2\obj\Debug\netcoreapp2.0\DellChallenge.Domain2.AssemblyInfoInputs.cache
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Domain2\obj\Debug\netcoreapp2.0\DellChallenge.Domain2.AssemblyInfo.cs
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Domain2\obj\Debug\netcoreapp2.0\DellChallenge.Domain2.dll
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Domain2\obj\Debug\netcoreapp2.0\DellChallenge.Domain2.pdb

@@ -5042,6 +5042,15 @@
       "DellChallenge.Repository/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "DellChallenge.Domain2": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1",
+          "Microsoft.EntityFrameworkCore.Tools": "2.0.1",
+          "Microsoft.Extensions.Configuration": "2.0.0",
+          "Microsoft.Extensions.Configuration.FileExtensions": "2.0.0",
+          "Microsoft.Extensions.Configuration.Json": "2.0.0"
+        },
         "compile": {
           "bin/placeholder/DellChallenge.Repository.dll": {}
         },
@@ -13156,7 +13165,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\07396942438\\.nuget\\packages\\": {},
+    "C:\\Users\\KaioRamonWin8\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
@@ -13166,18 +13175,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\07396942438\\Documents\\Visual Studio 2017\\Projects\\Domain\\DellChallenge.Web2\\DellChallenge.Web2.csproj",
+      "projectUniqueName": "C:\\Users\\KaioRamonWin8\\Documents\\GitHub\\DellChallenge\\DellChallenge.Web2\\DellChallenge.Web2.csproj",
       "projectName": "DellChallenge.Web2",
-      "projectPath": "C:\\Users\\07396942438\\Documents\\Visual Studio 2017\\Projects\\Domain\\DellChallenge.Web2\\DellChallenge.Web2.csproj",
-      "packagesPath": "C:\\Users\\07396942438\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\07396942438\\Documents\\Visual Studio 2017\\Projects\\Domain\\DellChallenge.Web2\\obj\\",
+      "projectPath": "C:\\Users\\KaioRamonWin8\\Documents\\GitHub\\DellChallenge\\DellChallenge.Web2\\DellChallenge.Web2.csproj",
+      "packagesPath": "C:\\Users\\KaioRamonWin8\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\KaioRamonWin8\\Documents\\GitHub\\DellChallenge\\DellChallenge.Web2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\07396942438\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\KaioRamonWin8\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -13191,11 +13200,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\07396942438\\Documents\\Visual Studio 2017\\Projects\\Domain\\DellChallenge.Repository\\DellChallenge.Repository.csproj": {
-              "projectPath": "C:\\Users\\07396942438\\Documents\\Visual Studio 2017\\Projects\\Domain\\DellChallenge.Repository\\DellChallenge.Repository.csproj"
+            "C:\\Users\\KaioRamonWin8\\Documents\\GitHub\\DellChallenge\\DellChallenge.Repository\\DellChallenge.Repository.csproj": {
+              "projectPath": "C:\\Users\\KaioRamonWin8\\Documents\\GitHub\\DellChallenge\\DellChallenge.Repository\\DellChallenge.Repository.csproj"
             },
-            "C:\\Users\\07396942438\\Documents\\Visual Studio 2017\\Projects\\Domain\\DellChallenge.Domain2\\DellChallenge.Domain2.csproj": {
-              "projectPath": "C:\\Users\\07396942438\\Documents\\Visual Studio 2017\\Projects\\Domain\\DellChallenge.Domain2\\DellChallenge.Domain2.csproj"
+            "C:\\Users\\KaioRamonWin8\\Documents\\GitHub\\DellChallenge\\DellChallenge.Domain2\\DellChallenge.Domain2.csproj": {
+              "projectPath": "C:\\Users\\KaioRamonWin8\\Documents\\GitHub\\DellChallenge\\DellChallenge.Domain2\\DellChallenge.Domain2.csproj"
             }
           }
         }

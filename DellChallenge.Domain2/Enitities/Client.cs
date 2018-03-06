@@ -7,14 +7,12 @@ using System.Text;
 
 namespace DellChallenge.Domain.Enitities
 {
-    [Table("Client")]
     public class Client
     {
-        [Key]
         public int Id { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
-        public Genger Gender { get; set; }
+        public Gender Gender { get; set; }
         public Classification Classification { get; set; }
         public string City { get; set; }
         public string Region { get; set; }

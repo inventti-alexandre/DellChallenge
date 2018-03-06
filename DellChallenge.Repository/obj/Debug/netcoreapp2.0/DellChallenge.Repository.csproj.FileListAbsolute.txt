@@ -7,3 +7,14 @@ c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.
 c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.AssemblyInfo.cs
 c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.dll
 c:\Users\07396942438\documents\visual studio 2017\Projects\Domain\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.pdb
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\bin\Debug\netcoreapp2.0\DellChallenge.Repository.deps.json
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\bin\Debug\netcoreapp2.0\DellChallenge.Repository.dll
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\bin\Debug\netcoreapp2.0\DellChallenge.Repository.pdb
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.csprojResolveAssemblyReference.cache
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.csproj.CoreCompileInputs.cache
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.AssemblyInfoInputs.cache
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.AssemblyInfo.cs
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.dll
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.pdb
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\bin\Debug\netcoreapp2.0\DellChallenge.Domain2.dll
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\bin\Debug\netcoreapp2.0\DellChallenge.Domain2.pdb

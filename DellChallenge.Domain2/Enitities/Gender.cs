@@ -6,10 +6,13 @@ using System.Text;
 
 namespace DellChallenge.Domain.Enitities
 {
-    [Table("Genger")]
-    public class Genger
+    public class Gender
     {
-        [Key]
+        public Gender(int id)
+        {
+            Id = id;
+        }
+
         public int Id { get; set; }
         public string Description { get; set; }
     }
