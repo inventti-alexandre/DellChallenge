@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Threading.Tasks;
 
 namespace DellChallenge.Web2
 {
@@ -49,7 +50,18 @@ namespace DellChallenge.Web2
             app.UseAuthentication();
 
             app.UseSession();
-            
+
+            app.UseStatusCodePages(new StatusCodePagesOptions()
+            {
+                HandleAsync = (ctx) =>
+                {
+                    var code = ctx.HttpContext.Response.StatusCode;
+                    
+                    
+                    ctx.HttpContext.Response.Redirect("/Home/StatusCode/"+ code);
+                    return Task.FromResult(0);
+                }
+            });
 
             app.UseMvc(routes =>
             {

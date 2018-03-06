@@ -21,13 +21,8 @@ namespace DellChallenge.Web2.Controllers
             return Redirect("Index");
         }
 
-        [HttpGet]
-        [AllowAnonymous]
-        public IActionResult AccessDenied(string returnUrl = null)
-        {
-
-            return View("AccessDenied");
-        }
+        
+       
 
         [HttpGet]
         [AllowAnonymous]

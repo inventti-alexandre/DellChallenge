@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using DellChallenge.Domain.Enitities;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Newtonsoft.Json;
@@ -61,5 +62,56 @@ namespace DellChallenge.Web2.Controllers
             }
         }
 
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult PageNotFound(string returnUrl = null)
+        {
+
+            return View("PageNotFound");
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public new IActionResult StatusCode(int id)
+        {
+            var statusmessage = string.Empty;
+            switch (id)
+            {
+                case 400:
+                    statusmessage = "Bad request: The request cannot be fulfilled due to bad syntax";
+                    break;
+
+                case 403:
+                    statusmessage = "Forbidden";
+                    break;
+
+                case 404:
+                    statusmessage = "Page not found";
+                    break;
+
+                case 408:
+                    statusmessage = "The server timed out waiting for the request";
+                    break;
+
+                case 500:
+                    statusmessage = "Internal Server Error - server was unable to finish processing the request";
+                    break;
+
+                default:
+                    statusmessage = "That’s odd... Something we didn't expect happened";
+                    break;
+            }
+
+            ViewBag.ErrorMessage = statusmessage;
+            ViewBag.Code = id;
+            return View("StatusCode");
+        }
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult AccessDenied(string returnUrl = null)
+        {
+
+            return View("AccessDenied");
+        }
     }
 }
