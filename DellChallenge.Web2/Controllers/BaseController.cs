@@ -16,7 +16,7 @@ namespace DellChallenge.Web2.Controllers
 {
     public class BaseController : Controller
     {
-        protected User UsuarioLogado => GetUser();
+        protected User UserAut => GetUser();
 
         protected static string SESSION_NAME = "user-on";
 
@@ -24,9 +24,10 @@ namespace DellChallenge.Web2.Controllers
         {
             var claims = new List<Claim>
             {
+                new Claim(ClaimTypes.Name, user.ToString() ),
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.Sid, user.Id.ToString()),
-                new Claim(ClaimTypes.Role, "Normal")
+                new Claim(ClaimTypes.Role, "Test")
             };
 
             var userIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -64,21 +65,13 @@ namespace DellChallenge.Web2.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        public IActionResult PageNotFound(string returnUrl = null)
-        {
-
-            return View("PageNotFound");
-        }
-
-        [HttpGet]
-        [AllowAnonymous]
         public new IActionResult StatusCode(int id)
         {
             var statusmessage = string.Empty;
             switch (id)
             {
                 case 400:
-                    statusmessage = "Bad request: The request cannot be fulfilled due to bad syntax";
+                    statusmessage = "Bad request: Do Login First to access this page.";
                     break;
 
                 case 403:
@@ -105,13 +98,6 @@ namespace DellChallenge.Web2.Controllers
             ViewBag.ErrorMessage = statusmessage;
             ViewBag.Code = id;
             return View("StatusCode");
-        }
-        [HttpGet]
-        [AllowAnonymous]
-        public IActionResult AccessDenied(string returnUrl = null)
-        {
-
-            return View("AccessDenied");
         }
     }
 }

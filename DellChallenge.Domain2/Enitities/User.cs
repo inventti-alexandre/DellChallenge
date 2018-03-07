@@ -34,5 +34,10 @@ namespace DellChallenge.Domain.Enitities
 
             return sbString.ToString();
         }
+
+        public new string ToString()
+        {
+            return Email + " - ";
+        }
     }
 }

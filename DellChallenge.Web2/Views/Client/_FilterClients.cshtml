@@ -1,0 +1,77 @@
+﻿@model DellChallenge.Domain.EntitiesViewModel.ClientFilterViewModel
+
+@{
+    ViewData["Title"] = "Filter Clients";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("input[type='text']").addClass('form-control');
+        $(".date").datepicker();
+
+    });
+
+</script>
+
+<h2>Filter Clients</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="form-group col-sm-12">
+                        <div class="col-sm-6 ">
+                            @Html.LabelFor(model => model.Name)
+                            @Html.TextBoxFor(model => model.Name)
+                        </div>
+                        <div class="col-sm-6">
+                            @Html.Label("Gender")
+                            @Html.TextBoxFor(model => model.GenderId)
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <div class="col-sm-6">
+                            @Html.LabelFor(model => model.City)
+                            @Html.TextBoxFor(model => model.City)
+                        </div>
+                        <div class="col-sm-6">
+                            @Html.LabelFor(model => model.Region)
+                            @Html.TextBoxFor(model => model.Region)
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <div class="col-sm-6">
+                            @Html.Label("Last Purchase")
+                            @Html.TextBoxFor(model => model.LastPurchase, new { @class = "date" })
+                        </div>
+                        <div class="col-sm-6">
+                            @Html.Label("Until")
+                            @Html.TextBoxFor(model => model.LastPurchaseUntil, new { @class = "date" } )
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <div class="col-sm-6">
+                            @Html.Label("Classification")
+                            @Html.TextBoxFor(model => model.ClassificationId)
+                        </div>
+                        <div class="col-sm-6">
+                            @Html.Label("Selleer")
+                            @Html.TextBoxFor(model => model.SellerId)
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-sm-2">
+                                <input type="button" class="btn waves-effect waves-light col s12" name="search" value="Search" id="search" />
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="button" class="btn waves-effect waves-light col s12" name="clear" value="Clear" id="clear" />
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+               
+ @Html.Partial("_ListClients", Model.Clients)

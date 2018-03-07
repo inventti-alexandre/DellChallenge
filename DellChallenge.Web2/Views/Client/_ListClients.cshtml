@@ -1,0 +1,36 @@
+﻿@model IEnumerable<DellChallenge.Domain.EntitiesViewModel.ClientResultViewModel>
+@{
+    ViewData["Title"] = "Clients";
+}
+
+<h2>Clients</h2>
+
+<script>
+
+    $(document).ready(function () {
+        $('#table').DataTable();
+    });
+
+</script>
+
+<table class="table" id="table">
+    <thead>
+        <tr>
+            <th scope="col">Code</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <th>@item.Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        }
+    </tbody>
+</table>

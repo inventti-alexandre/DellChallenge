@@ -12,6 +12,7 @@ namespace DellChallenge.Domain.EntitiesViewModel
         public string Classification { get; set; }
         public string City { get; set; }
         public string Region { get; set; }
+        public string  Seller { get; set; }
         public DateTime LastPurchase { get; set; }
 
     }

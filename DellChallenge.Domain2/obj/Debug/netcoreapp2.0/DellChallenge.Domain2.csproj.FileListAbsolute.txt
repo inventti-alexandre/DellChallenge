@@ -22,3 +22,6 @@ C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Domain2\obj\De
 C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Domain2\obj\Debug\netcoreapp2.0\DellChallenge.Domain2.AssemblyInfo.cs
 C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Domain2\obj\Debug\netcoreapp2.0\DellChallenge.Domain2.dll
 C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Domain2\obj\Debug\netcoreapp2.0\DellChallenge.Domain2.pdb
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Domain2\bin\Debug\netcoreapp2.0\DellChallenge.Domain2.deps.json
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Domain2\bin\Debug\netcoreapp2.0\DellChallenge.Domain2.dll
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Domain2\bin\Debug\netcoreapp2.0\DellChallenge.Domain2.pdb

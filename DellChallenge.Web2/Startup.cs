@@ -23,8 +23,8 @@ namespace DellChallenge.Web2
             services.AddAuthentication("Cookies")
             .AddCookie("Cookies", options =>
             {
-                options.AccessDeniedPath = "/Home/AccessDenied";
-                options.LoginPath = "/Home/AccessDenied";
+                options.AccessDeniedPath = "/Home/StatusCode/400";
+                options.LoginPath = "/Home/StatusCode/400";
             });
 
             services.AddSession();

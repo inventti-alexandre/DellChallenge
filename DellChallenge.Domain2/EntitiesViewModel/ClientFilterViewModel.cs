@@ -14,9 +14,12 @@ namespace DellChallenge.Domain.EntitiesViewModel
         public string Phone { get; set; }
         public int GenderId { get; set; }
         public int ClassificationId { get; set; }
+        public int SellerId { get; set; }
         public string City { get; set; }
         public string Region { get; set; }
         public DateTime LastPurchase { get; set; }
+        public DateTime LastPurchaseUntil { get; set; }
+        public List<ClientResultViewModel> Clients { get; set; }
 
     }
 }
