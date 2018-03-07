@@ -31,8 +31,8 @@ namespace DellChallange.Repository.Repositories
             var users = new List<User>()
             {
                 new User(1, "admin@sellseverything.com", new Role(1, "Administrator"), "admin123"),
-                new User(1, "seller1@sellseverything.com", new Role(2, "Seller"), "seller1123"),
-                new User(1, "seller2@sellseverything.com", new Role(2, "Seller"), "seller2123"),
+                new User(2, "seller1@sellseverything.com", new Role(2, "Seller"), "seller1123"),
+                new User(3, "seller2@sellseverything.com", new Role(2, "Seller"), "seller2123"),
             };
 
             return users;

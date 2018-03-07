@@ -1,5 +1,6 @@
 ﻿
 using DellChallenge.Domain.Enitities;
+using DellChallenge.Domain.Enum;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
@@ -22,9 +23,23 @@ namespace DellChallenge.Domain.EntitiesViewModel
         public int? RegionId { get; set; }
         public int Role { get; set; }
 
+        public int? UserLoggedId { get; set; }
+
         public List<SelectListItem> Genders { get; set; }
         public List<SelectListItem> Classifications { get; set; }
         public List<SelectListItem> Regions { get; set; }
         public List<SelectListItem> Sellers { get; set; }
+
+        public int? GetSellerId()
+        {
+            if (Role == (int)RoleEnum.Seller)
+            {
+                return UserLoggedId;
+            }
+            else
+            {
+                return SellerId;
+            }
+        }
     }
 }

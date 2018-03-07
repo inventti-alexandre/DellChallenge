@@ -13,49 +13,38 @@ namespace DellChallenge.Web2.Controllers
     public class ClientController : BaseController
     {
         private ClientService _clientService;
-        private IUserRepository _userRepository;
-        private IGenderRepository _genderRepository;
-        private IClassificationRepository _classificationRepository;
-        private IRegionRepository _regionRepository;
 
-        public ClientController(ClientService clientService, IUserRepository userRepository, IGenderRepository gengerRepository, IClassificationRepository classificationRepository, IRegionRepository regionRepository)
+
+        public ClientController(ClientService clientService)
         {
             _clientService = clientService;
-            _userRepository = userRepository;
-            _genderRepository = gengerRepository;
-            _classificationRepository = classificationRepository;
-            _regionRepository = regionRepository;
+
         }
 
         public IActionResult Index()
         {
             var user = UserAut;
 
-            var clientFilter = _clientService.List(new ClientFilterViewModel() { SellerId = user.Id, Role = user.RoleId }, user.RoleId);
-
-            clientFilter.Classifications = _classificationRepository.List().ToList().Select(m => new SelectListItem { Value = m.Id.ToString(), Text = m.Description }).ToList();
-            clientFilter.Regions = _regionRepository.List().ToList().Select(m => new SelectListItem { Value = m.Id.ToString(), Text = m.Description }).ToList();
-            clientFilter.Sellers = _userRepository.ListSeller().ToList().Select(m => new SelectListItem { Value = m.Id.ToString(), Text = m.Email }).ToList();
-            clientFilter.Genders = _genderRepository.List().ToList().Select(m => new SelectListItem { Value = m.Id.ToString(), Text = m.Description }).ToList();
+            var clientFilter = _clientService.List(new ClientFilterViewModel() { UserLoggedId = user.Id, Role = user.RoleId });
 
             return View(clientFilter);
         }
 
-        public IActionResult FilterClients(string Name,string Phone ,int? GenderId,int? ClassificationId, int? SellerId, string City , string Region , DateTime? LastPurchase , DateTime? LastPurchaseUntil, int? RegionId)
+        public IActionResult FilterClients(string name, string phone, int? genderId, int? classificationId, int? sellerId, string city, string region, DateTime? lastPurchase, DateTime? lastPurchaseUntil, int? regionId)
         {
             var user = UserAut;
             var clientFilterViewModel = new ClientFilterViewModel()
             {
-                Name = Name,
-                Phone = Phone,
-                GenderId = GenderId,
-                ClassificationId = ClassificationId,
-                SellerId = user.Id,
-                City = City,
-                Region = Region,
-                LastPurchase = LastPurchase,
-                LastPurchaseUntil = LastPurchaseUntil,
-                RegionId = RegionId,
+                Name = name,
+                Phone = phone,
+                GenderId = genderId,
+                ClassificationId = classificationId,
+                SellerId = sellerId,
+                City = city,
+                Region = region,
+                LastPurchase = lastPurchase,
+                LastPurchaseUntil = lastPurchaseUntil,
+                RegionId = regionId,
             };
 
             var clientFilter = _clientService.List(clientFilterViewModel, user.RoleId);

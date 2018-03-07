@@ -45,9 +45,9 @@ namespace DellChallange.Repository.Repositories
             var clients = new List<Client>()
             {
                 new Client(1, "Kelly", "55995599", genders[1], classifications[0], "NY", regions[0], DateTime.Now.AddDays(-2), users[1]),
-                new Client(1, "Brian", "55886677", genders[0], classifications[0], "NY", regions[1], DateTime.Now.AddDays(-1), users[1]),
-                new Client(1, "Brown", "44556677", genders[0], classifications[0], "NY", regions[1], DateTime.Now.AddDays(0), users[1]),
-                new Client(1, "Katy", "88113344", genders[1], classifications[0], "NY", regions[2], DateTime.Now.AddDays(2), users[2]),
+                new Client(1, "Brian", "55886677", genders[0], classifications[1], "NY", regions[1], DateTime.Now.AddDays(-1), users[1]),
+                new Client(1, "Brown", "44556677", genders[0], classifications[2], "NY", regions[1], DateTime.Now.AddDays(0), users[1]),
+                new Client(1, "Katy", "88113344", genders[1], classifications[1], "NY", regions[2], DateTime.Now.AddDays(2), users[2]),
                 new Client(1, "Kelly", "99557777", genders[1], classifications[0], "NY", regions[3], DateTime.Now.AddDays(3), users[2])
 
             };
