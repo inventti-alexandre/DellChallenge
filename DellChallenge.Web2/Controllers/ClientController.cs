@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Linq;
 using DellChallenge.Domain.EntitiesViewModel;
-using DellChallenge.Domain.Interfaces;
 using DellChallenge.Domain.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace DellChallenge.Web2.Controllers
 {

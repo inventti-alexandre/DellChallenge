@@ -1,13 +1,7 @@
 ﻿using DellChallenge.Domain.Enitities;
-using DellChallenge.Domain.EnititiesViewModel;
 using DellChallenge.Domain.EntitiesViewModel;
 using DellChallenge.Domain.Interfaces;
-using DellChallenge.Domain.Enitities;
-using DellChallenge.Domain.Enum;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace DellChallenge.Domain.Services
