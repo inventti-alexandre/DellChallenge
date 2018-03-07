@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using DellChallange.Repository.Repositories;
+using DellChallenge.Domain.Interfaces;
+using DellChallenge.Domain.Services;
+using DellChallenge.Domain.Interfaces;
+using DellChallenge.Repository.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
@@ -29,6 +32,15 @@ namespace DellChallenge.Web2
 
             services.AddSession();
             services.AddMvc();
+
+            services.AddTransient<IClientRepository, ClientRepository>();
+            services.AddTransient<IGenderRepository, GenderRepository>();
+            services.AddTransient<IClassificationRepository, ClassificationRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IRegionRepository, RegionRepository>();
+            
+            services.AddTransient<AuthenticationService, AuthenticationService>();
+            services.AddTransient<ClientService, ClientService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

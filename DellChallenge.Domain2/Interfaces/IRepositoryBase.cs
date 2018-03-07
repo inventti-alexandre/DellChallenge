@@ -5,10 +5,10 @@ namespace DellChallenge.Domain.Interfaces.Repositories
 {
     public interface IRepositoryBase <T>
     {
-        void Inserir(T t);
-        void Atualizar(T t);
-        T RecuperarPorId(int id);
-        IQueryable<T> List();
-        void Excluir(int id);
+        void Insert(T t);
+        void Update(T t);
+        T Get(int id);
+        //IQueryable<T> List();
+        void Delete(int id);
     }
 }

@@ -8,7 +8,44 @@
     $(document).ready(function () {
 
         $("input[type='text']").addClass('form-control');
-        $(".date").datepicker();
+        //$(".date").datepicker();
+
+        $("#search").on('click', function (e) {
+
+            var filter = {
+                name: $("#Name").val(),
+                genderId: $("#GenderId").val(),
+                city: $("#City").val(),
+                regionId: $("#RegionId").val(),
+                lastPurchase: $("#LastPurchase").val(),
+                lastPurchaseUntil: $("#LastPurchaseUntil").val(),
+                classificationId: $("#ClassificationId").val(),
+                sellerId: $("#SellerId").val(),
+            }
+           
+            $.ajax({
+                url: "/Client/FilterClients",
+                type: "POST",
+                data: filter,
+                success: function (response) {
+                    debugger;
+                    if (response != null) {
+                        $("#clients").html(response);
+                    } 
+                },
+                error: function (error) {
+                    debugger;
+
+                }
+            })
+
+        });
+
+        $("#clear").on('click', function (e) {
+
+            window.location = "";
+
+        });
 
     });
 
@@ -27,7 +64,7 @@
                         </div>
                         <div class="col-sm-6">
                             @Html.Label("Gender")
-                            @Html.TextBoxFor(model => model.GenderId)
+                            @Html.DropDownListFor(model => model.GenderId, new SelectList(Model.Genders, "Value", "Text"), "Selecione", new { @class = "form-control" })
                         </div>
                     </div>
                     <div class="form-group col-sm-12">
@@ -36,8 +73,8 @@
                             @Html.TextBoxFor(model => model.City)
                         </div>
                         <div class="col-sm-6">
-                            @Html.LabelFor(model => model.Region)
-                            @Html.TextBoxFor(model => model.Region)
+                            @Html.Label("Region")
+                            @Html.DropDownListFor(model => model.RegionId, new SelectList(Model.Regions, "Value", "Text"), "Selecione", new { @class= "form-control" })
                         </div>
                     </div>
                     <div class="form-group col-sm-12">
@@ -53,12 +90,16 @@
                     <div class="form-group col-sm-12">
                         <div class="col-sm-6">
                             @Html.Label("Classification")
-                            @Html.TextBoxFor(model => model.ClassificationId)
+                            @Html.DropDownListFor(model => model.ClassificationId, new SelectList(Model.Classifications, "Value", "Text"), "Selecione", new { @class = "form-control" })
                         </div>
+                        @if (Model.Role == (int)DellChallenge.Domain.Enum.RoleEnum.Administrator)
+                        {
                         <div class="col-sm-6">
                             @Html.Label("Selleer")
-                            @Html.TextBoxFor(model => model.SellerId)
+                            @Html.DropDownListFor(model => model.SellerId, new SelectList(Model.Sellers, "Value", "Text"), "Selecione", new { @class = "form-control" })
+
                         </div>
+                        }
                     </div>
                     <div class="row">
                             <div class="col-sm-2">
@@ -73,5 +114,7 @@
         </div>
     </div>
 </div>
-               
- @Html.Partial("_ListClients", Model.Clients)
+
+<div id="clients">
+    @Html.Partial("_ListClients", Model.Clients)
+</div>

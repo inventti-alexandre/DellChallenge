@@ -8,10 +8,17 @@ namespace DellChallenge.Domain.Enitities
 {
     public class Classification
     {
+        
 
         public Classification(int id)
         {
             Id = id;
+        }
+
+        public Classification(int id, string description)
+        {
+            Id = id;
+            Description = description;
         }
 
         public int Id { get; set; }

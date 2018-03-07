@@ -8,9 +8,15 @@ namespace DellChallenge.Domain.Enitities
 {
     public class Gender
     {
-        public Gender(int id)
+        public Gender(int genderId)
+        {
+            this.Id = genderId;
+        }
+
+        public Gender(int id, string description)
         {
             Id = id;
+            Description = description;
         }
 
         public int Id { get; set; }

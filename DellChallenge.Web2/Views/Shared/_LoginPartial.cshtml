@@ -15,8 +15,6 @@
 
             };
 
-            JSON.stringify(usuario)
-            debugger;
             $.ajax({
                 url: "/Home/Login",
                 type: "POST",
@@ -24,10 +22,14 @@
                 success: function (response) {
                     if (response.success) {
                         window.location = '/Home/';
+                    } else {
+                        debugger;
+                        window.location = '/Home/StatusCode/' + response.statusCode;
                     }
                 },
                 error: function (error) {
-
+                    debugger;
+                   
                 }
             })
 
@@ -53,7 +55,7 @@
                         <div class="input-field col s12">
 
                             @Html.LabelFor(model => model.Email)
-                            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", maxlength = 11 })
+                            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", maxlength = 30 })
 
                         </div>
                     </div>

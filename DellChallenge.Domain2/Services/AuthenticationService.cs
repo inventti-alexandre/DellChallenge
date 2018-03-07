@@ -2,7 +2,7 @@
 using DellChallenge.Domain.EnititiesViewModel;
 using DellChallenge.Domain.Interfaces;
 
-namespace DellChallenge.Domain2.Services
+namespace DellChallenge.Domain.Services
 {
     public class AuthenticationService
     {

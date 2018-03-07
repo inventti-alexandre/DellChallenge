@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using DellChallenge.Domain.Enitities;
+using DellChallenge.Domain.EnititiesViewModel;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -16,11 +17,11 @@ namespace DellChallenge.Web2.Controllers
 {
     public class BaseController : Controller
     {
-        protected User UserAut => GetUser();
+        protected UserResultViewModel UserAut => GetUser();
 
         protected static string SESSION_NAME = "user-on";
 
-        protected async Task RegisterUser(User user)
+        protected async Task RegisterUser(UserResultViewModel user)
         {
             var claims = new List<Claim>
             {
@@ -46,14 +47,14 @@ namespace DellChallenge.Web2.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         }
 
-        private User GetUser()
+        private UserResultViewModel GetUser()
         {
             try
             {
                 HttpContext.Session.TryGetValue(SESSION_NAME, out byte[] usuario);
 
                 if (usuario != null && usuario.Length > 0)
-                    return JsonConvert.DeserializeObject<User>(Encoding.UTF8.GetString(usuario));
+                    return JsonConvert.DeserializeObject<UserResultViewModel>(Encoding.UTF8.GetString(usuario));
                 else
                     return null;
             }
@@ -73,7 +74,9 @@ namespace DellChallenge.Web2.Controllers
                 case 400:
                     statusmessage = "Bad request: Do Login First to access this page.";
                     break;
-
+                case 401:
+                    statusmessage = "Bad request: Login or email Invalid.";
+                    break;
                 case 403:
                     statusmessage = "Forbidden";
                     break;

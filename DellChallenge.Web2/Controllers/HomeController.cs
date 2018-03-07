@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using DellChallenge.Domain.Enitities;
 using DellChallenge.Domain.EnititiesViewModel;
+using DellChallenge.Domain.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +11,8 @@ namespace DellChallenge.Web2.Controllers
 {
     public class HomeController : BaseController
     {
+        private AuthenticationService _authenticationService;
+
         public IActionResult Index()
         {
             return View();
@@ -21,14 +24,15 @@ namespace DellChallenge.Web2.Controllers
             return Redirect("Index");
         }
 
-        
-       
+        public HomeController(AuthenticationService authenticationService)
+        {
+            _authenticationService = authenticationService;
+        }
 
         [HttpGet]
         [AllowAnonymous]
         public IActionResult Login(string returnUrl = null)
         {
-
             return View("Index");
         }
 
@@ -38,24 +42,20 @@ namespace DellChallenge.Web2.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
+                var userAuthenticated = _authenticationService.Login(new UserLoginViewModel(email, password));
+
+                if (userAuthenticated != null)
                 {
-                    var user = new UserLoginViewModel() { Email = email, Password = password };
-
-                    var userAuthenticated = new User(email, password);
-
                     await RegisterUser(userAuthenticated);
-
+                    return Json(new { success = true, html = View("Home") });
                 }
 
-                return Json(new { success = true, html = View("Home") });
+                return Json(new { success = false, statusCode = 401 });
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-
-            }
-            return Json(new { success = true, html = View("Home")});
-            
+                return Json(new { success = false, statusCode = 400 });
+            }            
         }
     }
 }

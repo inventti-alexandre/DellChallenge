@@ -13,7 +13,7 @@ namespace DellChallenge.Domain.EntitiesViewModel
         public string City { get; set; }
         public string Region { get; set; }
         public string  Seller { get; set; }
-        public DateTime LastPurchase { get; set; }
-
+        public DateTime? LastPurchase { get; set; }
+        public int RegionId { get; set; }
     }
 }

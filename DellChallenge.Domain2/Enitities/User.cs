@@ -1,4 +1,4 @@
-﻿using DellChallenge.Domain2.Enitities;
+﻿using DellChallenge.Domain.Enitities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -19,6 +19,19 @@ namespace DellChallenge.Domain.Enitities
         {
             Email = email;
             //Password = EncryptPassword(password);
+            Password = password;
+        }
+
+        public User(int id)
+        {
+            Id = id;
+        }
+
+        public User(int id, string email, Role role, string password)
+        {
+            Id = id;
+            Email = email;
+            Role = role;
             Password = password;
         }
 

@@ -20,28 +20,33 @@ namespace DellChallange.Repository.Repositories
             uow = new Uow(_context);
         }
 
-        public void Excluir(int id)
+        public RepositoryBase()
+        {
+         
+        }
+
+        public void Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public T RecuperarPorId(int id)
+        public T Get(int id)
         {
             return DbSet.Find(id);
         }
 
-        public IQueryable<T> List()
-        {
-            return DbSet;
-        }
+        //public IQueryable<T> List()
+        //{
+        //    return DbSet;
+        //}
 
-        public void Inserir(T t)
+        public void Insert(T t)
         {
             DbSet.Add(t);
             uow.Commit();
         }
 
-        public void Atualizar(T t)
+        public void Update(T t)
         {
             DbSet.Update(t);
             uow.Commit();

@@ -1,6 +1,7 @@
 ﻿using DellChallenge.Domain.Enitities;
 using DellChallenge.Domain.Interfaces;
 using DellChallange.Repository.Context;
+using System.Collections.Generic;
 
 namespace DellChallange.Repository.Repositories
 {
@@ -10,16 +11,27 @@ namespace DellChallange.Repository.Repositories
         {
         }
 
-        public void Salvar(Classification usuario)
+        public ClassificationRepository()
         {
-            if (usuario.Id == 0)
+        }
+
+        public List<Classification> List()
+        {
+            return DbClassification();
+        }
+
+
+        public static  List<Classification> DbClassification()
+        {
+            var classification = new List<Classification>()
             {
-                Inserir(usuario);
-            }
-            else
-            {
-                Atualizar(usuario);
-            }
+                new Classification(1, "Gold"),
+                new Classification(2, "Silver"),
+                new Classification(3, "Bronze"),
+
+            };
+
+            return classification;
         }
     }
 }
