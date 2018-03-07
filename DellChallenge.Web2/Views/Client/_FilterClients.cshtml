@@ -28,23 +28,18 @@
                 type: "POST",
                 data: filter,
                 success: function (response) {
-                    debugger;
                     if (response != null) {
                         $("#clients").html(response);
                     } 
                 },
                 error: function (error) {
-                    debugger;
-
                 }
             })
 
         });
 
         $("#clear").on('click', function (e) {
-
-            window.location = "";
-
+            window.location = '/Client/';
         });
 
     });
@@ -64,7 +59,7 @@
                         </div>
                         <div class="col-sm-6">
                             @Html.Label("Gender")
-                            @Html.DropDownListFor(model => model.GenderId, new SelectList(Model.Genders, "Value", "Text"), "Selecione", new { @class = "form-control" })
+                            @Html.DropDownListFor(model => model.GenderId, new SelectList(Model.Genders, "Value", "Text"), "Select", new { @class = "form-control" })
                         </div>
                     </div>
                     <div class="form-group col-sm-12">
@@ -74,7 +69,7 @@
                         </div>
                         <div class="col-sm-6">
                             @Html.Label("Region")
-                            @Html.DropDownListFor(model => model.RegionId, new SelectList(Model.Regions, "Value", "Text"), "Selecione", new { @class= "form-control" })
+                            @Html.DropDownListFor(model => model.RegionId, new SelectList(Model.Regions, "Value", "Text"), "Select", new { @class= "form-control" })
                         </div>
                     </div>
                     <div class="form-group col-sm-12">
@@ -90,13 +85,13 @@
                     <div class="form-group col-sm-12">
                         <div class="col-sm-6">
                             @Html.Label("Classification")
-                            @Html.DropDownListFor(model => model.ClassificationId, new SelectList(Model.Classifications, "Value", "Text"), "Selecione", new { @class = "form-control" })
+                            @Html.DropDownListFor(model => model.ClassificationId, new SelectList(Model.Classifications, "Value", "Text"), "Select", new { @class = "form-control" })
                         </div>
-                        @if (Model.Role == (int)DellChallenge.Domain.Enum.RoleEnum.Administrator)
+                        @if (Model.RoleId == (int)DellChallenge.Domain.Enum.RoleEnum.Administrator)
                         {
                         <div class="col-sm-6">
                             @Html.Label("Selleer")
-                            @Html.DropDownListFor(model => model.SellerId, new SelectList(Model.Sellers, "Value", "Text"), "Selecione", new { @class = "form-control" })
+                            @Html.DropDownListFor(model => model.SellerId, new SelectList(Model.Sellers, "Value", "Text"), "Select", new { @class = "form-control" })
 
                         </div>
                         }

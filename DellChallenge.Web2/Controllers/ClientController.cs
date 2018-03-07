@@ -22,7 +22,7 @@ namespace DellChallenge.Web2.Controllers
         {
             var user = UserAut;
 
-            var clientFilter = _clientService.List(new ClientFilterViewModel() { UserLoggedId = user.Id, Role = user.RoleId });
+            var clientFilter = _clientService.List(new ClientFilterViewModel() { UserLoggedId = user.Id, RoleId = user.RoleId });
 
             return View(clientFilter);
         }
@@ -42,9 +42,11 @@ namespace DellChallenge.Web2.Controllers
                 LastPurchase = lastPurchase,
                 LastPurchaseUntil = lastPurchaseUntil,
                 RegionId = regionId,
+                UserLoggedId = user.Id,
+                RoleId = user.RoleId
             };
 
-            var clientFilter = _clientService.List(clientFilterViewModel, user.RoleId);
+            var clientFilter = _clientService.List(clientFilterViewModel);
 
             return PartialView("_ListClients", clientFilter.Clients);
         }

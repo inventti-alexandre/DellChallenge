@@ -21,7 +21,7 @@ namespace DellChallenge.Domain.EntitiesViewModel
         public DateTime? LastPurchaseUntil { get; set; }
         public List<ClientResultViewModel> Clients { get; set; }
         public int? RegionId { get; set; }
-        public int Role { get; set; }
+        public int RoleId { get; set; }
 
         public int? UserLoggedId { get; set; }
 
@@ -32,7 +32,7 @@ namespace DellChallenge.Domain.EntitiesViewModel
 
         public int? GetSellerId()
         {
-            if (Role == (int)RoleEnum.Seller)
+            if (RoleId == (int)RoleEnum.Seller)
             {
                 return UserLoggedId;
             }

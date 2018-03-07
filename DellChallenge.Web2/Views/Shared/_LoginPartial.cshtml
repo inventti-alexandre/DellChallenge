@@ -21,15 +21,12 @@
                 data: usuario,
                 success: function (response) {
                     if (response.success) {
-                        window.location = '/Home/';
+                        window.location = '/Client/';
                     } else {
-                        debugger;
                         window.location = '/Home/StatusCode/' + response.statusCode;
                     }
                 },
                 error: function (error) {
-                    debugger;
-                   
                 }
             })
 
