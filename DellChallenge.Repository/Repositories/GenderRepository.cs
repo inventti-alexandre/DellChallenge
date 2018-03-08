@@ -2,6 +2,7 @@
 using DellChallenge.Domain.Interfaces;
 using DellChallange.Repository.Context;
 using System.Collections.Generic;
+using DellChallenge.Repository.Context;
 
 namespace DellChallange.Repository.Repositories
 {
@@ -15,21 +16,9 @@ namespace DellChallange.Repository.Repositories
         {
         }
 
-        public new List<Gender> List()
+        public List<Gender> List()
         {
-            return DbGender();
-        }
-
-        public static List<Gender> DbGender()
-        {
-            var genders = new List<Gender>()
-            {
-                new Gender(1, "Male"),
-                new Gender(2, "Female"),
-
-            };
-
-            return genders;
+            return FakeContextSingleton.DbGender();
         }
     }
 }

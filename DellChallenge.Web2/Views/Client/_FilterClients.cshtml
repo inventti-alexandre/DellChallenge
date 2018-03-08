@@ -32,7 +32,9 @@
                         $("#clients").html(response);
                     } 
                 },
-                error: function (error) {
+                error: function (response) {
+                    
+                    $("#clients").html(response.responseJSON.errors);
                 }
             })
 

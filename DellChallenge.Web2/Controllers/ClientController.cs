@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using DellChallenge.Domain.EntitiesViewModel;
 using DellChallenge.Domain.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -27,28 +28,22 @@ namespace DellChallenge.Web2.Controllers
             return View(clientFilter);
         }
 
-        public IActionResult FilterClients(string name, string phone, int? genderId, int? classificationId, int? sellerId, string city, string region, DateTime? lastPurchase, DateTime? lastPurchaseUntil, int? regionId)
+        public IActionResult FilterClients(string name, string phone, int? genderId, int? classificationId, int? sellerId, string city, string region, string lastPurchase, string lastPurchaseUntil, int? regionId)
         {
-            var user = UserAut;
-            var clientFilterViewModel = new ClientFilterViewModel()
+            try
             {
-                Name = name,
-                Phone = phone,
-                GenderId = genderId,
-                ClassificationId = classificationId,
-                SellerId = sellerId,
-                City = city,
-                Region = region,
-                LastPurchase = lastPurchase,
-                LastPurchaseUntil = lastPurchaseUntil,
-                RegionId = regionId,
-                UserLoggedId = user.Id,
-                RoleId = user.RoleId
-            };
+                var user = UserAut;
+                var clientFilterViewModel = new ClientFilterViewModel(name, phone, genderId, classificationId, sellerId, city, region, regionId, user.Id, user.RoleId, lastPurchase, lastPurchaseUntil);
 
-            var clientFilter = _clientService.List(clientFilterViewModel);
+                var clientFilter = _clientService.List(clientFilterViewModel);
 
-            return PartialView("_ListClients", clientFilter.Clients);
+                return PartialView("_ListClients", clientFilter.Clients);
+            }
+            catch(Exception ex)
+            {
+                Response.StatusCode = (int)HttpStatusCode.BadGateway;
+                return Json(new {   errors = ex.Message });
+            }
         }
 
         public IActionResult ClearFilter()
