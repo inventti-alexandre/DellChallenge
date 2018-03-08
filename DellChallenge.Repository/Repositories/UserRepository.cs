@@ -3,6 +3,8 @@ using DellChallenge.Domain.Interfaces;
 using DellChallange.Repository.Context;
 using System.Collections.Generic;
 using System.Linq;
+using DellChallenge.Repository.Context;
+using DellChallenge.Domain.Enum;
 
 namespace DellChallange.Repository.Repositories
 {
@@ -18,24 +20,12 @@ namespace DellChallange.Repository.Repositories
 
         public List<User> ListSeller()
         {
-            return DbUser().Where(x => x.Role.Id == 2).ToList();
+            return FakeContextSingleton.DbUser().Where(x => x.Role.Id == (int)RoleEnum.Seller).ToList();
         }
 
         public User Find(User user)
         {
-            return DbUser().FirstOrDefault(x => x.Email.Equals(user.Email) && x.Password.Equals(user.Password));
-        }
-
-        public static List<User> DbUser()
-        {
-            var users = new List<User>()
-            {
-                new User(1, "admin@sellseverything.com", new Role(1, "Administrator"), "admin123"),
-                new User(2, "seller1@sellseverything.com", new Role(2, "Seller"), "seller1123"),
-                new User(3, "seller2@sellseverything.com", new Role(2, "Seller"), "seller2123"),
-            };
-
-            return users;
+            return FakeContextSingleton.DbUser().FirstOrDefault(x => x.Email.Equals(user.Email) && x.Password.Equals(user.Password));
         }
     }
 }

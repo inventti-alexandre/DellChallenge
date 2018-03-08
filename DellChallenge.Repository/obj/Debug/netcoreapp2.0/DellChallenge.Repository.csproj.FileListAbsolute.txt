@@ -31,3 +31,5 @@ C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Repository\obj
 C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Repository\obj\Debug\netcoreapp2.0\DellChallenge.Repository.pdb
 C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Repository\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
 C:\Users\07396942438\Documents\GitHub\DellChallenge\DellChallenge.Repository\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Users\KaioRamonWin8\Documents\GitHub\DellChallenge\DellChallenge.Repository\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Mvc.ViewFeatures.xml

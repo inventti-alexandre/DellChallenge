@@ -1,6 +1,7 @@
 ﻿using DellChallange.Repository.Repositories;
 using DellChallenge.Domain.Enitities;
 using DellChallenge.Domain.Interfaces;
+using DellChallenge.Repository.Context;
 using System.Collections.Generic;
 
 namespace DellChallenge.Repository.Repositories
@@ -11,22 +12,9 @@ namespace DellChallenge.Repository.Repositories
         {
         }
 
-        public new List<Region> List()
+        public List<Region> List()
         {
-            return DbRegion();
-        }
-
-        public static List<Region> DbRegion()
-        {
-            var retions = new List<Region>()
-            {
-                new Region(1, "North"),
-                new Region(2, "South"),
-                new Region(3, "Weast"),
-                new Region(4, "East"),
-            };
-
-            return retions;
+            return FakeContextSingleton.DbRegion();
         }
     }
 }

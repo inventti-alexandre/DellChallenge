@@ -7,8 +7,16 @@
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "DellChallenge.Domain2/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.0.2.0"
+        },
         "runtime": {
           "DellChallenge.Domain2.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.ViewFeatures/2.0.2.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Mvc.ViewFeatures.dll": {}
         }
       }
     }
@@ -16,6 +24,11 @@
   "libraries": {
     "DellChallenge.Domain2/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Mvc.ViewFeatures/2.0.2.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

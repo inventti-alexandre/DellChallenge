@@ -664,7 +664,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\07396942438\\.nuget\\packages\\": {},
+    "C:\\Users\\KaioRamonWin8\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
@@ -674,18 +674,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\07396942438\\Documents\\GitHub\\DellChallenge\\DellChallenge.Domain2\\DellChallenge.Domain2.csproj",
+      "projectUniqueName": "C:\\Users\\KaioRamonWin8\\Documents\\GitHub\\DellChallenge\\DellChallenge.Domain2\\DellChallenge.Domain2.csproj",
       "projectName": "DellChallenge.Domain2",
-      "projectPath": "C:\\Users\\07396942438\\Documents\\GitHub\\DellChallenge\\DellChallenge.Domain2\\DellChallenge.Domain2.csproj",
-      "packagesPath": "C:\\Users\\07396942438\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\07396942438\\Documents\\GitHub\\DellChallenge\\DellChallenge.Domain2\\obj\\",
+      "projectPath": "C:\\Users\\KaioRamonWin8\\Documents\\GitHub\\DellChallenge\\DellChallenge.Domain2\\DellChallenge.Domain2.csproj",
+      "packagesPath": "C:\\Users\\KaioRamonWin8\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\KaioRamonWin8\\Documents\\GitHub\\DellChallenge\\DellChallenge.Domain2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\07396942438\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\KaioRamonWin8\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
