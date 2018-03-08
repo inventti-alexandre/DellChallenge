@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Net;
 using DellChallenge.Domain.EntitiesViewModel;
 using DellChallenge.Domain.Services;
@@ -29,12 +30,12 @@ namespace DellChallenge.Web2.Controllers
             return View(clientFilter);
         }
 
-        public IActionResult FilterClients(string name, string phone, int? genderId, int? classificationId, int? sellerId, string city, string region, string lastPurchase, string lastPurchaseUntil, int? regionId)
+        public IActionResult FilterClients(string name, string phone, int? genderId, int? classificationId, int? sellerId, int? cityId, string region, string lastPurchase, string lastPurchaseUntil, int? regionId)
         {
             try
             {
                 var user = UserAut;
-                var clientFilterViewModel = new ClientFilterViewModel(name, phone, genderId, classificationId, sellerId, city, region, regionId, user.Id, user.RoleId, lastPurchase, lastPurchaseUntil);
+                var clientFilterViewModel = new ClientFilterViewModel(name, phone, genderId, classificationId, sellerId, cityId, region, regionId, user.Id, user.RoleId, lastPurchase, lastPurchaseUntil);
 
                 var clientFilter = _clientService.List(clientFilterViewModel);
 
@@ -45,6 +46,19 @@ namespace DellChallenge.Web2.Controllers
                 Response.StatusCode = (int)HttpStatusCode.BadGateway;
                 return Json(new {   errors = ex.Message });
             }
+        }
+
+        public IActionResult FilterRegions(int cityId)
+        {
+            var clientFilter = _clientService.FilterRegions(cityId);
+            var listToReturn = clientFilter.Select(c =>
+                             new
+                             {
+                                 Value = c.Id,
+                                 Text = c.Description
+                             }).ToList();
+
+            return Json(new { success = true, obj = listToReturn });
         }
 
         public IActionResult ClearFilter()

@@ -7,5 +7,6 @@ namespace DellChallenge.Domain.Interfaces
     public interface IRegionRepository : IRepositoryBase<Region>
     {
         List<Region> List();
+        List<Region> ListByCity(int? idCity);
     }
 }

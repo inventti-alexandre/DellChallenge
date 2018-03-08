@@ -15,14 +15,14 @@ namespace DellChallenge.Domain.EntitiesViewModel
         {
         }
 
-        public ClientFilterViewModel(string name, string phone, int? genderId, int? classificationId, int? sellerId, string city, string region, int? regionId, int userLoggedId, int roleId, string lastPurchase, string lastPurchaseUntil)
+        public ClientFilterViewModel(string name, string phone, int? genderId, int? classificationId, int? sellerId, int? cityId, string region, int? regionId, int userLoggedId, int roleId, string lastPurchase, string lastPurchaseUntil)
         {
             Name = name;
             Phone = phone;
             GenderId = genderId;
             ClassificationId = classificationId;
             SellerId = sellerId;
-            City = city;
+            CityId = cityId;
             Region = region;
             RegionId = regionId;
             UserLoggedId = userLoggedId;
@@ -37,7 +37,7 @@ namespace DellChallenge.Domain.EntitiesViewModel
         public int? GenderId { get; set; }
         public int? ClassificationId { get; set; }
         public int? SellerId { get; set; }
-        public string City { get; set; }
+        public int? CityId { get; set; }
         public string Region { get; set; }
         public DateTime? LastPurchase { get; set; }
         public DateTime? LastPurchaseUntil { get; set; }
@@ -51,6 +51,7 @@ namespace DellChallenge.Domain.EntitiesViewModel
         public List<SelectListItem> Classifications { get; set; }
         public List<SelectListItem> Regions { get; set; }
         public List<SelectListItem> Sellers { get; set; }
+        public List<SelectListItem> Cities { get; internal set; }
 
         public int? GetSellerId()
         {

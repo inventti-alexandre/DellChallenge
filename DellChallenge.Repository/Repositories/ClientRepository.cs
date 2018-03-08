@@ -22,9 +22,10 @@ namespace DellChallange.Repository.Repositories
         public IEnumerable<Client> List(Client client, DateTime? lastPurchaseUntil)
         {
             var clients = FakeContextSingleton.DbClient().Where(x => 
-                (string.IsNullOrEmpty(client.City) || x.City.Contains(client.City) )
-            && (string.IsNullOrEmpty(client.Name) || x.Name.Contains(client.Name) )
+            
+            (string.IsNullOrEmpty(client.Name) || x.Name.Contains(client.Name) )
             && (string.IsNullOrEmpty(client.Phone) || x.Phone.Contains(client.Phone))
+            && (client.Region.City.Id == 0 || x.Region.City.Id == client.Region.City.Id)
             && (client.Region.Id == 0 || x.Region.Id == client.Region.Id)
             && (client.Seller.Id == 0 || x.Seller.Id == client.Seller.Id)
             && (client.Classification.Id == 0 || x.Classification.Id == client.Classification.Id)

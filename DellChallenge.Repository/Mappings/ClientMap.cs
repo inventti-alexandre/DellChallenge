@@ -26,11 +26,6 @@ namespace DellChallange.Repository.Mappings
                 .HasMaxLength(10)
                 .IsRequired();
 
-            builder.Property(c => c.City)
-            .HasColumnType("varchar(10)")
-                .HasMaxLength(10)
-                .IsRequired();
-
             builder.Property(c => c.Region)
             .HasColumnType("varchar(10)")
                 .HasMaxLength(10)

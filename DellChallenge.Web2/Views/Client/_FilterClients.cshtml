@@ -15,7 +15,7 @@
             var filter = {
                 name: $("#Name").val(),
                 genderId: $("#GenderId").val(),
-                city: $("#City").val(),
+                cityId: $("#CityId").val(),
                 regionId: $("#RegionId").val(),
                 lastPurchase: $("#LastPurchase").val(),
                 lastPurchaseUntil: $("#LastPurchaseUntil").val(),
@@ -30,14 +30,45 @@
                 success: function (response) {
                     if (response != null) {
                         $("#clients").html(response);
-                    } 
+                    }
                 },
                 error: function (response) {
-                    
+
                     $("#clients").html(response.responseJSON.errors);
                 }
-            })
+            });
 
+        });
+
+        $("#CityId").on('change', function (e) {
+
+            var cityId = $("#CityId").val();
+
+            if (cityId == "") {
+                cityId = 0;
+            }
+
+            $.ajax({
+                    url: "/Client/FilterRegions?cityId=" + cityId,
+                    type: "GET",
+                    success: function (data) {
+                        if (data != null) {
+                           
+                            var ddldist = $("#RegionId");
+                            ddldist.children().not(":first").remove();
+
+                            $.each(data.obj, function (val, text) {
+                                debugger;
+                                ddldist.append(
+                                    $("<option></option>").val(text.value).html(text.text)
+                                );
+                            });
+                        }
+                    },
+                    error: function (response) {
+                    }
+                });
+            
         });
 
         $("#clear").on('click', function (e) {
@@ -66,8 +97,9 @@
                     </div>
                     <div class="form-group col-sm-12">
                         <div class="col-sm-6">
-                            @Html.LabelFor(model => model.City)
-                            @Html.TextBoxFor(model => model.City)
+                            @Html.Label("city")
+                            @Html.DropDownListFor(model => model.CityId, new SelectList(Model.Cities, "Value", "Text"), "Select", new { @class = "form-control" })
+                            
                         </div>
                         <div class="col-sm-6">
                             @Html.Label("Region")

@@ -13,6 +13,7 @@ namespace DellChallenge.Repository.Context
         private static List<Region> _regions;
         private static List<Role> _roles;
         private static List<Client> _clients;
+        private static List<City> _cities;
 
         public static List<Classification> DbClassification()
         {
@@ -23,9 +24,9 @@ namespace DellChallenge.Repository.Context
 
             _classifications = new List<Classification>()
             {
-                new Classification(1, "Gold"),
-                new Classification(2, "Silver"),
-                new Classification(3, "Bronze"),
+                new Classification(1, "VIP"),
+                new Classification(2, "Regular"),
+                new Classification(3, "Sporadic"),
 
             };
 
@@ -44,11 +45,11 @@ namespace DellChallenge.Repository.Context
 
             _clients = new List<Client>()
             {
-                new Client(1, "Kelly", "55995599", genders[1], classifications[0], "NY", regions[0], DateTime.Now.AddDays(-2), users[1]),
-                new Client(1, "Brian", "55886677", genders[0], classifications[1], "NY", regions[1], DateTime.Now.AddDays(-1), users[1]),
-                new Client(1, "Brown", "44556677", genders[0], classifications[2], "NY", regions[1], DateTime.Now.AddDays(0), users[1]),
-                new Client(1, "Katy", "88113344", genders[1], classifications[1], "NY", regions[2], DateTime.Now.AddDays(2), users[2]),
-                new Client(1, "Kelly", "99557777", genders[1], classifications[0], "NY", regions[3], DateTime.Now.AddDays(3), users[2])
+                new Client(1, "Kelly", "55995599", genders[1], classifications[0], regions[0], DateTime.Now.AddDays(-2), users[1]),
+                new Client(1, "Brian", "55886677", genders[0], classifications[1], regions[1], DateTime.Now.AddDays(-1), users[1]),
+                new Client(1, "Brown", "44556677", genders[0], classifications[2], regions[1], DateTime.Now.AddDays(0), users[1]),
+                new Client(1, "Katy", "88113344", genders[1], classifications[1], regions[2], DateTime.Now.AddDays(2), users[2]),
+                new Client(1, "Kelly", "99557777", genders[1], classifications[0], regions[3], DateTime.Now.AddDays(3), users[2])
 
             };
 
@@ -92,12 +93,14 @@ namespace DellChallenge.Repository.Context
             if (_regions != null)
                 return _regions;
 
+            var cities = DbCicty();
+
             _regions = new List<Region>()
             {
-                new Region(1, "North"),
-                new Region(2, "South"),
-                new Region(3, "Weast"),
-                new Region(4, "East"),
+                new Region(1, "North", cities[0]),
+                new Region(2, "South", cities[1]),
+                new Region(3, "Weast", cities[2]),
+                new Region(4, "East", cities[3]),
             };
 
             return _regions;
@@ -113,6 +116,26 @@ namespace DellChallenge.Repository.Context
             };
 
             return _genders;
+        }
+
+        public static List<City> DbCicty()
+        {
+            if (_cities != null)
+            {
+                return _cities;
+            }
+
+            _cities = new List<City>()
+            {
+                new City(1, "Natal"),
+                new City(2, "Porto Alegre"),
+                new City(3, "Sao Paulo"),
+                new City(4, "Manaus"),
+                new City(5, "Recife"),
+
+            };
+
+            return _cities;
         }
     }
 }

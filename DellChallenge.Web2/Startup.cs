@@ -38,7 +38,8 @@ namespace DellChallenge.Web2
             services.AddTransient<IClassificationRepository, ClassificationRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IRegionRepository, RegionRepository>();
-            
+            services.AddTransient<ICityRepository, CityRepository>();
+
             services.AddTransient<AuthenticationService, AuthenticationService>();
             services.AddTransient<ClientService, ClientService>();
         }

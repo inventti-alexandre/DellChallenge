@@ -1,11 +1,6 @@
-﻿using DellChallenge.Domain.EnititiesViewModel;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DellChallenge.Web2.Filter
@@ -21,7 +16,7 @@ namespace DellChallenge.Web2.Filter
                 return next();
             }
 
-            context.Result = new RedirectToActionResult("StatusCode/401", "Home", 401);
+            context.Result = new RedirectToActionResult("StatusCode/400", "Home", 400);
             return context.Result.ExecuteResultAsync(context);
         }
     }
