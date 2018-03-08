@@ -1,12 +1,13 @@
 ﻿using System;
 using DellChallenge.Domain.EntitiesViewModel;
 using DellChallenge.Domain.Services;
+using DellChallenge.Web2.Filter;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DellChallenge.Web2.Controllers
 {
-    [Authorize]
+    [Authorize, FilterSession]
     public class ClientController : BaseController
     {
         private ClientService _clientService;
