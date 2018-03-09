@@ -46,10 +46,20 @@ namespace DellChallenge.Repository.Context
             _clients = new List<Client>()
             {
                 new Client(1, "Kelly", "55995599", genders[1], classifications[0], regions[0], DateTime.Now.AddDays(-2), users[1]),
-                new Client(1, "Brian", "55886677", genders[0], classifications[1], regions[1], DateTime.Now.AddDays(-1), users[1]),
-                new Client(1, "Brown", "44556677", genders[0], classifications[2], regions[1], DateTime.Now.AddDays(0), users[1]),
-                new Client(1, "Katy", "88113344", genders[1], classifications[1], regions[2], DateTime.Now.AddDays(2), users[2]),
-                new Client(1, "Kelly", "99557777", genders[1], classifications[0], regions[3], DateTime.Now.AddDays(3), users[2])
+                new Client(2, "Brian", "55886677", genders[0], classifications[1], regions[1], DateTime.Now.AddDays(-1), users[1]),
+                new Client(3, "Brown", "44556677", genders[0], classifications[2], regions[1], DateTime.Now.AddDays(0), users[1]),
+                new Client(4, "Katy", "88113344", genders[1], classifications[1], regions[2], DateTime.Now.AddDays(2), users[2]),
+                new Client(5, "Ramon", "11111555", genders[1], classifications[1], regions[3], DateTime.Now.AddDays(4), users[1]),
+                new Client(6, "Kaio", "45465", genders[1], classifications[1], regions[1], DateTime.Now.AddDays(5), users[1]),
+                new Client(7, "Carlos", "444457777", genders[1], classifications[1], regions[1], DateTime.Now.AddDays(6), users[1]),
+                new Client(8, "Gilberto", "888999", genders[1], classifications[1], regions[1], DateTime.Now.AddDays(7), users[1]),
+                new Client(9, "Gil", "66667778", genders[0], classifications[2], regions[2], DateTime.Now.AddDays(8), users[1]),
+                new Client(10, "Maria", "55114422", genders[0], classifications[2], regions[2], DateTime.Now.AddDays(3), users[1]),
+                new Client(11, "Ana", "444557788", genders[0], classifications[2], regions[0], DateTime.Now.AddDays(1), users[2]),
+                new Client(12, "Sandra", "44222331156", genders[0], classifications[2], regions[0], DateTime.Now.AddDays(2), users[2]),
+                new Client(13, "Luciana", "666888222", genders[0], classifications[0], regions[1], DateTime.Now.AddDays(3), users[2]),
+                new Client(14, "Camila", "9997776623", genders[0], classifications[0], regions[3], DateTime.Now.AddDays(4), users[2]),
+                new Client(15, "Silva", "1122334567", genders[0], classifications[0], regions[3], DateTime.Now.AddDays(3), users[2])
 
             };
 

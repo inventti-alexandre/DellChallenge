@@ -124,7 +124,7 @@
                         @if (Model.RoleId == (int)DellChallenge.Domain.Enum.RoleEnum.Administrator)
                         {
                         <div class="col-sm-6">
-                            @Html.Label("Selleer")
+                            @Html.Label("Seller")
                             @Html.DropDownListFor(model => model.SellerId, new SelectList(Model.Sellers, "Value", "Text"), "Select", new { @class = "form-control" })
 
                         </div>

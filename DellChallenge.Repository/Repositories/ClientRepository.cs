@@ -21,9 +21,9 @@ namespace DellChallange.Repository.Repositories
 
         public IEnumerable<Client> List(Client client, DateTime? lastPurchaseUntil)
         {
-            var clients = FakeContextSingleton.DbClient().Where(x => 
-            
-            (string.IsNullOrEmpty(client.Name) || x.Name.Contains(client.Name) )
+            var clients = FakeContextSingleton.DbClient().Where(x =>
+
+            (string.IsNullOrEmpty(client.Name) || x.Name.ToUpper().Contains(client.Name.ToUpper()))
             && (string.IsNullOrEmpty(client.Phone) || x.Phone.Contains(client.Phone))
             && (client.Region.City.Id == 0 || x.Region.City.Id == client.Region.City.Id)
             && (client.Region.Id == 0 || x.Region.Id == client.Region.Id)
@@ -31,13 +31,9 @@ namespace DellChallange.Repository.Repositories
             && (client.Classification.Id == 0 || x.Classification.Id == client.Classification.Id)
             && (client.Gender.Id == 0 || x.Gender.Id == client.Gender.Id)
             && (client.LastPurchase == null || x.LastPurchase.Value >= client.LastPurchase.Value)
-            && (lastPurchaseUntil == null  || x.LastPurchase.Value <= lastPurchaseUntil.Value));
+            && (lastPurchaseUntil == null || x.LastPurchase.Value <= lastPurchaseUntil.Value));
 
             return clients;
         }
-
-
-        
-
     }
 }
